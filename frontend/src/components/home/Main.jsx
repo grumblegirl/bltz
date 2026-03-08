@@ -17,10 +17,34 @@ import isoIcon from '../../assets/iso42001.png';
 import soc2Icon from '../../assets/soc2.png';
 import nistIcon from '../../assets/nisrmf.png';
 
+
 import runtimeImg from '../../assets/home/runtime.png';
 import purpleteamImg from '../../assets/home/purpleteam.png';
 import workspaceImg from '../../assets/home/workspace.png';
-import shieldLogo from '../../assets/shield_logo.png';
+import logoRotate from '../../assets/movie/logo_rotate_large_v2.gif';
+import visibilityChart from '../../assets/visibility.png';
+
+import gptIcon from '../../assets/openaicircle.png';
+import huggingFaceIcon from '../../assets/huggingfacecircle.png';
+import metaIcon from '../../assets/meta.png';
+import claudeIcon from '../../assets/anthropic.png';
+import geminiIcon from '../../assets/geminicircle.png';
+import mistralIcon from '../../assets/mistral.png';
+import deepseekIcon from '../../assets/deepseek.png';
+import ollamaIcon from '../../assets/ollama.png';
+import bedrockIcon from '../../assets/bedrock.png';
+import vertexIcon from '../../assets/vertexai.png';
+import cohereIcon from '../../assets/cohere.png';
+import nvidiaIcon from '../../assets/nividia.png';
+import langchainIcon from '../../assets/langchain.png';
+import pytorchIcon from '../../assets/pytorch.png';
+import tensorflowIcon from '../../assets/tensorflow.png';
+import copilotIcon from '../../assets/copilot.png';
+import kerasIcon from '../../assets/keras.png';
+import pineconeIcon from '../../assets/pinecone.png';
+import crewaiIcon from '../../assets/crewai.png';
+import qwenIcon from '../../assets/qwen.png';
+import moltbotIcon from '../../assets/moltbot.png';
 
 const tickerItems = [
   { text: 'Agent', icon: agentIcon, invert: true },
@@ -35,13 +59,11 @@ const tickerItems = [
 ];
 
 const Main = () => {
+
   return (
     <>
       <section className="main-hero">
-        <div className="hero-content">
-          <p className="hero-subtitle">Safe AI Adoption on Critical Infrastructure with</p>
-          <h1 className="hero-title">AGENTIC DEFENSIVE AI SECURITY</h1>
-        </div>
+        <img src={logoRotate} alt="Bltz Logo" className="hero-logo-rotate" />
         <div className="feature-cards">
           <div className="feature-card-wrapper">
             <div className="feature-card">
@@ -71,6 +93,18 @@ const Main = () => {
             </div>
           </div>
         </div>
+        <div className="hero-gif-fade-left"></div>
+        <div className="hero-gif-fade-right"></div>
+        <div className="hero-overlay-content">
+          <h1 className="hero-title">Agentic AI Defense Platform</h1>
+          <p className="hero-tagline">One Platform to Discover, Test, Protect, and Govern AI</p>
+        </div>
+
+        <p className="hero-subtitle">Secure Your AI Before Attackers Do</p>
+        <button className="hero-demo-btn">
+          Book a Demo
+          <span className="hero-demo-arrow">→</span>
+        </button>
         <div className="compliance-icons">
           <span className="tooltip-wrapper" data-tooltip="OWASP LLM TOP 10">
             <img src={owaspIcon} alt="OWASP" className="compliance-icon" />

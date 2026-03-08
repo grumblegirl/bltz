@@ -1,10 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Navigation.css';
 import shieldLogo from '../../assets/shield_logo.png';
 
 const Navigation = () => {
+  const [onDark, setOnDark] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const hero = document.querySelector('.main-hero');
+      if (hero) {
+        const heroBottom = hero.getBoundingClientRect().bottom;
+        setOnDark(heroBottom > 60);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navigation">
+    <nav className={`navigation ${onDark ? 'nav-dark' : 'nav-light'}`}>
       <div className="nav-container">
         <div className="nav-logo">
           <img src={shieldLogo} alt="Bltz AI" className="logo-icon" />
