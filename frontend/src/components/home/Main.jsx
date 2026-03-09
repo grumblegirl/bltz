@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Main.css';
 
 import agentIcon from '../../assets/agent3.png';
@@ -137,6 +138,19 @@ const Main = () => {
         <h2 className="section-title">Runtime Shield</h2>
         <p className="section-description">Bltz Runtime Shield enables complete visibility and protection for AI in production, discovering and monitoring all AI traffic at runtime while stopping prompt attacks, data leaks, and unsafe behavior with built-in AI governance and self-healing remediation.</p>
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-container">
+          <div className="footer-left">
+            <span className="footer-brand">Bltz AI</span>
+            <span className="footer-copy">&copy; {new Date().getFullYear()} Bltz AI, Inc. All rights reserved.</span>
+          </div>
+          <div className="footer-links">
+            <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+            <a href="mailto:support@bltz.ai" className="footer-link">Contact</a>
+          </div>
+        </div>
+      </footer>
     </>
   );
 };
